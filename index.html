@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" href="https://s-media-cache-ak0.pinimg.com/originals/e1/ea/82/e1ea82cb1c39656b925012efe60f22ea.png">
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="style/main.css">
+
+	<title>My VueJS App</title>
+</head>
+<body>
+	<div id="app">
+		<h2>{{ hello }}</h2>
+		<input type="text" v-model="hello">
+		<span>{{ counter }}</span>
+		<button class="btn btn-danger" @click="addOne()">Add one!</button>
+		<div v-if="counter > 3">
+			More
+		</div>
+		<div v-else="counter > 5">more more</div>
+		<a :href="hello">hjhjhj</a>
+
+		<ul>
+			<li v-for="item in arr" @click="counter++">{{ item }}</li>
+		</ul>
+	</div>
+
+
+	<script src="https://unpkg.com/vue"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
